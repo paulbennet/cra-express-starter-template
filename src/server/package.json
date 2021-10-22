@@ -10,7 +10,7 @@
     "kill-server": "node ./express/index.js --kill",
     "serve": "NODE_ENV=production node ./express/index.js",
     "lint": "node ./node_modules/eslint/bin/eslint.js --fix --cache -f stylish --config .eslintrc.js .",
-    "setup-client": "mkdir -p ../client && cd ../client && npx create-react-app . --use-npm && cp ../../build/client-config/.env . && rm -rf ../../build/client-config && npx json -I -f package.json -e this.proxy=\"http://localhost:9098\" && npm i -D eslint && eslint --init && eslint --fix ."
+    "setup-client": "mkdir -p ../client && cd ../client && npx create-react-app . --use-npm && cp ../../build/client-config/.env . && rm -rf ../../build/client-config"
   },
   "repository": {
     "type": "git",
