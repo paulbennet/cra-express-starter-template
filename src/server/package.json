@@ -1,0 +1,38 @@
+{
+  "name": "cra-express-starter-template",
+  "version": "1.0.0",
+  "description": "CRA + Express JS starter template project",
+  "serverConfig": {
+    "port": "9098"
+  },
+  "scripts": {
+    "start-server": "nodemon --watch . ./express/index.js",
+    "kill-server": "node ./express/index.js --kill",
+    "serve": "NODE_ENV=production node ./express/index.js",
+    "lint": "node ./node_modules/eslint/bin/eslint.js --fix --cache -f stylish --config .eslintrc.js .",
+    "setup-client": "mkdir -p ../client && cd ../client && npx create-react-app . && cp ../../build/client-config/.env . && cp ../../build/client-config/.eslintrc.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulbennet/cra-express-starter-template.git"
+  },
+  "author": "paulbennetjoshua@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nocache": "^3.0.1",
+    "server-destroy": "^1.0.1"
+  }
+}
