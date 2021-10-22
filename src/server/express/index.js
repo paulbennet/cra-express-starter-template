@@ -70,7 +70,6 @@ const mainProcess = () => {
 
   server.listen(PORT, () => {
     console.log('[log] App started in port ', PORT)
-    console.log('[log] You can now access the app @ ', `http://localhost:${PORT}/app/`)
   })
 
   serverDestroy(server)
